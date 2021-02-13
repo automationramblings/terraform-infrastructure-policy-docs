@@ -1,0 +1,23 @@
+poweruser:
+  config:
+    Policy:
+      - "Lambda-CICD"
+      -  "S3-DEVOPS" 
+    Service:
+      - "lambda.amazonaws.com"
+      - "s3.amazonaws.com"
+      - "ec2.amazonaws.com"
+
+devops:
+  config:
+    Policy:
+      -  "S3-DEVOPS"
+    Service:
+      - "s3.amazonaws.com"
+      - "ec2.amazonaws.com"
+cicd:
+  config:
+    Policy:
+      - "Lambda-CICD"
+    Service:
+      - "lambda.amazonaws.com"
