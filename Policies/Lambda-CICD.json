@@ -1,0 +1,100 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:CreateFunction",
+                "lambda:TagResource",
+                "lambda:ListVersionsByFunction",
+                "lambda:PublishLayerVersion",
+                "lambda:InvokeAsync",
+                "lambda:GetFunctionConfiguration",
+                "lambda:UntagResource",
+                "lambda:PutFunctionConcurrency",
+                "lambda:ListProvisionedConcurrencyConfigs",
+                "lambda:ListTags",
+                "lambda:PutFunctionEventInvokeConfig",
+                "lambda:DeleteFunctionEventInvokeConfig",
+                "lambda:DeleteFunction",
+                "lambda:GetAlias",
+                "lambda:PutFunctionCodeSigningConfig",
+                "lambda:UpdateFunctionEventInvokeConfig",
+                "lambda:DeleteFunctionCodeSigningConfig",
+                "lambda:UpdateFunctionCodeSigningConfig",
+                "lambda:InvokeFunction",
+                "lambda:GetFunction",
+                "lambda:ListAliases",
+                "lambda:UpdateFunctionConfiguration",
+                "lambda:GetFunctionCodeSigningConfig",
+                "lambda:UpdateAlias",
+                "lambda:UpdateFunctionCode",
+                "lambda:ListFunctionEventInvokeConfigs",
+                "lambda:GetFunctionConcurrency",
+                "lambda:GetFunctionEventInvokeConfig",
+                "lambda:DeleteAlias",
+                "lambda:PublishVersion",
+                "lambda:DeleteFunctionConcurrency",
+                "lambda:GetPolicy",
+                "lambda:CreateAlias"
+            ],
+            "Resource": [
+                "arn:aws:lambda:${aws_region}:${aws_account_id}:function:*",
+                "arn:aws:lambda:${aws_region}:${aws_account_id}:layer:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:UpdateEventSourceMapping",
+                "lambda:UpdateFunctionCodeSigningConfig",
+                "lambda:GetLayerVersion",
+                "lambda:GetEventSourceMapping",
+                "lambda:DeleteProvisionedConcurrencyConfig",
+                "lambda:GetLayerVersionPolicy",
+                "lambda:DeleteCodeSigningConfig",
+                "lambda:UpdateCodeSigningConfig",
+                "lambda:GetProvisionedConcurrencyConfig",
+                "lambda:ListFunctionsByCodeSigningConfig",
+                "lambda:DeleteLayerVersion",
+                "lambda:PutProvisionedConcurrencyConfig",
+                "lambda:GetCodeSigningConfig",
+                "lambda:DeleteEventSourceMapping",
+                "lambda:PutFunctionCodeSigningConfig",
+                "lambda:CreateCodeSigningConfig"
+            ],
+            "Resource": [
+                "arn:aws:lambda:${aws_region}:${aws_account_id}:layer:*:*",
+                "arn:aws:lambda:${aws_region}:${aws_account_id}:codesigningconfig:*",
+                "arn:aws:lambda:${aws_region}:${aws_account_id}:function:*:*",
+                "arn:aws:lambda:${aws_region}:${aws_account_id}:event-source-mapping:*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor2",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:GetProvisionedConcurrencyConfig",
+                "lambda:PutProvisionedConcurrencyConfig",
+                "lambda:DeleteProvisionedConcurrencyConfig"
+            ],
+            "Resource": "arn:aws:lambda:${aws_region}:${aws_account_id}:function:*:*"
+        },
+        {
+            "Sid": "VisualEditor3",
+            "Effect": "Allow",
+            "Action": [
+                "lambda:ListFunctions",
+                "lambda:ListEventSourceMappings",
+                "lambda:ListLayerVersions",
+                "lambda:ListLayers",
+                "lambda:GetAccountSettings",
+                "lambda:CreateEventSourceMapping",
+                "lambda:ListCodeSigningConfigs"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
